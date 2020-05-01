@@ -26,7 +26,7 @@ We'll be using:
 * [x] Initialize knex project
   * [x] Install knex and pg
   * [x] Create knexfile.js
-* [ ] Create sticker table migration
+* [x] Create sticker table migration
 * [ ] Seed sticker table with sample data
 * [ ] Convert Express App to JSON API
   * [ ] Remove view rendering
