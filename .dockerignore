@@ -1,6 +1,5 @@
-Dockerfile
-Dockerfile.dev
-docker-compose.yml
+Dockerfile*
+docker-*.yml
 node_modules
 *.log
 .env

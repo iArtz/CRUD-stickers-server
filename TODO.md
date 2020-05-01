@@ -27,7 +27,7 @@ We'll be using:
   * [x] Install knex and pg
   * [x] Create knexfile.js
 * [x] Create sticker table migration
-* [ ] Seed sticker table with sample data
+* [x] Seed sticker table with sample data
 * [ ] Convert Express App to JSON API
   * [ ] Remove view rendering
   * [ ] Remove routes folder
