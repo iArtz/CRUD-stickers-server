@@ -22,10 +22,10 @@ We'll be using:
 * [x] Create a server folder
   * [x] Generate Express App
   * [x] initialize git repo
-* [ ] Create database
-* [ ] Initialize knex project
-  * [ ] Install knex and pg
-  * [ ] Create knexfile.js
+* [x] Create database
+* [x] Initialize knex project
+  * [x] Install knex and pg
+  * [x] Create knexfile.js
 * [ ] Create sticker table migration
 * [ ] Seed sticker table with sample data
 * [ ] Convert Express App to JSON API
