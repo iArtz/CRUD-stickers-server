@@ -28,11 +28,11 @@ We'll be using:
   * [x] Create knexfile.js
 * [x] Create sticker table migration
 * [x] Seed sticker table with sample data
-* [ ] Convert Express App to JSON API
-  * [ ] Remove view rendering
-  * [ ] Remove routes folder
-  * [ ] Remove static serve and public folder
-  * [ ] Update error handler
+* [x] Convert Express App to JSON API
+  * [x] Remove view rendering
+  * [x] Remove routes folder
+  * [x] Remove static serve and public folder
+  * [x] Update error handler
 * [ ] Add api folder and create/mount router
 * [ ] Connect to the database'
   * [ ] Create database connection file
