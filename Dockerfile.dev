@@ -6,8 +6,6 @@ COPY package.json .
 
 COPY yarn.lock .
 
-RUN npm install -g knex
-
 RUN yarn install
 
 COPY . .

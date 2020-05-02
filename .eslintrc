@@ -5,7 +5,7 @@
         "node": true
     },
     "extends": [
-        "prettier"
+        "plugin:prettier/recommended"
     ],
     "globals": {
         "Atomics": "readonly",

@@ -36,9 +36,9 @@ We'll be using:
   - [x] Remove static serve and public folder
   - [x] Update error handler
 - [x] Add api folder and create/mount router
-- [ ] Connect to the database'
-  - [ ] Create database connection file
-  - [ ] Create a queries file
+- [x] Connect to the database'
+  - [x] Create database connection file
+  - [x] Create a queries file
 - [ ] List all records with GET /api/v1/stickers
   - [ ] Create query
   - [ ] Create route
