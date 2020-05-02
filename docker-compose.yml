@@ -13,20 +13,11 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - app:/usr/src/app/node_modules
       - .:/usr/src/app
-
-  test:
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    networks:
-      - backend
-    volumes:
-      - app:/usr/src/app/node_modules
-      - .:/usr/src/app
-    command: ['yarn', 'test']
-
+      - packages:/usr/src/app/node_modules
+    depends_on: 
+      - db
+      
   db:
     image: postgres:10
     environment:
@@ -38,7 +29,7 @@ services:
       - db:/var/lib/postgresql/data
 
 volumes:
-  app:
+  packages:
   db:
 
 networks:
