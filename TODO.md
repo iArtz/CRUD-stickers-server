@@ -42,13 +42,13 @@ We'll be using:
 - [x] List all records with GET /api/v1/stickers
   - [x] Create query
   - [x] Create route
-- [ ] Setup tests
-  - [ ] Install mocha, chai and supertest
-  - [ ] Add a test database connection
-  - [ ] Add npm test script
-    - [ ] Drop/Create database
-  - [ ] Create before
-    - [ ] Run migrations/seeds on test db
+- [x] Setup tests
+  - [x] Install mocha, chai and supertest
+  - [x] Add a test database connection
+  - [x] Add npm test script
+    - [x] Drop/Create database
+  - [x] Create before
+    - [x] Run migrations/seeds on test db
 - [ ] Make sure the tests are working!
 - [ ] List all records with GET /api/v1/stickers
   - [ ] Add test

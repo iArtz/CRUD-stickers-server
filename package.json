@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "test": "(dropdb --if-exists -h db -U $POSTGRES_USER test-web && createdb -h db -U $POSTGRES_USER test-web) && NODE_ENV=test mocha"
   },
   "husky": {
     "hooks": {
@@ -29,6 +30,7 @@
     "pg": "^8.0.3"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
@@ -38,7 +40,9 @@
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.2",
+    "mocha": "^7.1.2",
     "nodemon": "^2.0.3",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "supertest": "^4.0.2"
   }
 }
