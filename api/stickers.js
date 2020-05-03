@@ -9,6 +9,13 @@ const isValidId = (req, res, next) => {
   next(new Error('Invalid ID'))
 }
 
+const vaildSticker = (sticker) => {
+  const hasTitle =
+    typeof sticker.Title == 'string' && sticker.Title.trim() != ''
+  const hasURL = typeof sticker.URL == 'string' && sticker.URL.trim() != ''
+  return hasTitle && hasURL
+}
+
 router.get('/', async (req, res) => {
   await queries.getAll().then((stickers) => {
     res.json(stickers)
@@ -17,12 +24,22 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', isValidId, async (req, res, next) => {
   await queries.getOne(req.params.id).then((sticker) => {
-      if(sticker) {
-          res.json(sticker)
-      } else {
-          next()
-      }
+    if (sticker) {
+      res.json(sticker)
+    } else {
+      next()
+    }
   })
+})
+
+router.post('/', async (req, res, next) => {
+  if (vaildSticker(req.body)) {
+    await queries.create(req.body).then((stickers) => {
+      res.json(stickers[0])
+    })
+  } else {
+    next(new Error('Invalid sticker'))
+  }
 })
 
 module.exports = router

@@ -64,6 +64,14 @@ const stickers = [
   },
 ]
 
+const sticker = {
+    "Title": "Git",
+    "Description": "Git Logo",
+    "Rating": 10,
+    "URL": "http://devstickers.com/assets/img/pro/4mh6.png"
+}
+
 module.exports = {
   stickers,
+  sticker
 }

@@ -58,9 +58,9 @@ We'll be using:
   - [x] Create route
   - [x] Add test
 - [ ] Create a record with POST /api/v1/stickers
-  - [ ] Create route
-  - [ ] Validate sticker!
-  - [ ] Create query
+  - [x] Create route
+  - [x] Validate sticker!
+  - [x] Create query
   - [ ] Add test
 - [ ] Update a record with PUT /api/v1/stickers/:id
   - [ ] Create route
