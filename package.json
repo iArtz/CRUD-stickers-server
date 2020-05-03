@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon",
-    "test": "(dropdb --if-exists -h db -U $POSTGRES_USER test-web && createdb -h db -U $POSTGRES_USER test-web) && NODE_ENV=test mocha"
+    "test": "(dropdb --if-exists -h db -U $POSTGRES_USER test-web && createdb -h db -U $POSTGRES_USER test-web) && NODE_ENV=test mocha --exit"
   },
   "husky": {
     "hooks": {

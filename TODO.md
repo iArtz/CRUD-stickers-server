@@ -49,9 +49,9 @@ We'll be using:
     - [x] Drop/Create database
   - [x] Create before
     - [x] Run migrations/seeds on test db
-- [ ] Make sure the tests are working!
-- [ ] List all records with GET /api/v1/stickers
-  - [ ] Add test
+- [x] Make sure the tests are working!
+- [x] List all records with GET /api/v1/stickers
+  - [x] Add test
 - [ ] Show one record with GET /api/v1/stickers/:id
   - [ ] Validate id
   - [ ] Create query
