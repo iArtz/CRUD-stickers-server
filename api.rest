@@ -35,3 +35,11 @@ Content-Type: application/json
     "Rating": 3,
     "URL": "http://devstickers.com/assets/img/pro/4mh6.png"
 }
+###
+# @name delete
+DELETE {{url}}/stickers/10 HTTP/1.1
+Content-Type: application/json
+
+{
+    "Id": 10
+}

@@ -68,8 +68,8 @@ We'll be using:
   - [x] Validate updates
   - [x] Create query
   - [x] Add test
-- [ ] Delete a record with DELETE /api/v1/stickers/:id
-  - [ ] Create route
-  - [ ] Validate id
-  - [ ] Create query
-  - [ ] Add test
+- [x] Delete a record with DELETE /api/v1/stickers/:id
+  - [x] Create route
+  - [x] Validate id
+  - [x] Create query
+  - [x] Add test

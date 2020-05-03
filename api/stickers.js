@@ -54,4 +54,12 @@ router.put('/:id', isValidId, async (req, res, next) => {
   }
 })
 
+router.delete('/:id', isValidId, async (req, res, next) => {
+  await queries.delete(req.params.id).then(() => {
+    res.json({
+      deleted: true
+    })
+  })
+})
+
 module.exports = router

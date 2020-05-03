@@ -24,7 +24,8 @@ describe('CRUD Stickers', () => {
       .get('/api/v1/stickers')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
-      .expect(200).then((response) => {
+      .expect(200)
+      .then((response) => {
         expect(response.body).to.be.a('array')
         expect(response.body).to.deep.equal(fixtures.stickers)
         done()
@@ -36,19 +37,21 @@ describe('CRUD Stickers', () => {
       .get('/api/v1/stickers/1')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
-      .expect(200).then((response) => {
+      .expect(200)
+      .then((response) => {
         expect(response.body).to.be.a('object')
         expect(response.body).to.deep.equal(fixtures.stickers[0])
         done()
       })
   })
-  
+
   it('Show one record by id', (done) => {
     request(app)
       .get('/api/v1/stickers/5')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
-      .expect(200).then((response) => {
+      .expect(200)
+      .then((response) => {
         expect(response.body).to.be.a('object')
         expect(response.body).to.deep.equal(fixtures.stickers[4])
         done()
@@ -57,31 +60,47 @@ describe('CRUD Stickers', () => {
 
   it('Create a record', (done) => {
     request(app)
-    .post('/api/v1/stickers')
-    .send(fixtures.sticker)
-    .set('Accept', 'application/json')
-    .expect('Content-Type', /json/)
-    .expect(200)
-    .then((response) => {
-      expect(response.body).to.be.a('object')
-      fixtures.sticker.Id = response.body.Id
-      expect(response.body).to.deep.equal(fixtures.sticker)
-      done()
-    })
+      .post('/api/v1/stickers')
+      .send(fixtures.sticker)
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200)
+      .then((response) => {
+        expect(response.body).to.be.a('object')
+        fixtures.sticker.Id = response.body.Id
+        expect(response.body).to.deep.equal(fixtures.sticker)
+        done()
+      })
   })
 
   it('Update a record', (done) => {
     fixtures.sticker.Rating = 5
     request(app)
-    .put('/api/v1/stickers/10')
-    .send(fixtures.sticker)
-    .set('Accept', 'application/json')
-    .expect('Content-Type', /json/)
-    .expect(200)
-    .then((response) => {
-      expect(response.body).to.be.a('object')
-      expect(response.body).to.deep.equal(fixtures.sticker)
-      done()
-    })
+      .put('/api/v1/stickers/10')
+      .send(fixtures.sticker)
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200)
+      .then((response) => {
+        expect(response.body).to.be.a('object')
+        expect(response.body).to.deep.equal(fixtures.sticker)
+        done()
+      })
+  })
+
+  it('Delete a record', (done) => {
+    request(app)
+      .delete('/api/v1/stickers/10')
+      .send(fixtures.sticker)
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200)
+      .then((response) => {
+        expect(response.body).to.be.a('object')
+        expect(response.body).to.deep.equal({
+          deleted: true
+        })
+        done()
+      })
   })
 })
