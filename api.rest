@@ -43,3 +43,13 @@ Content-Type: application/json
 {
     "Id": 10
 }
+###
+# @name queryStringTitle
+GET {{url}}/stickers?title=mocha HTTP/1.1
+###
+# @name queryStringTitleWildcard
+GET {{url}}/stickers?title=a HTTP/1.1
+###
+# @name queryStringTitleAndDescription
+GET {{url}}/stickers?title=Beer&description=chai HTTP/1.1
+###

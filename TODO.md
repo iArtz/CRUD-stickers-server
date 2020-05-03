@@ -73,3 +73,7 @@ We'll be using:
   - [x] Validate id
   - [x] Create query
   - [x] Add test
+- [x] Query sting /api/v1/stickers?title=:title?description=:description
+  - [x] Create route
+  - [x] Create query
+  - [x] Add test

@@ -16,7 +16,8 @@ services:
       - 3000:3000
     volumes:
       - .:/usr/src/app
-      - /usr/src/app/node_modules
+      - packages:/usr/src/app/node_modules
+      - packages
     depends_on: 
       - db
       
@@ -33,6 +34,7 @@ services:
 
 volumes:
   db:
+  packages:
 
 networks:
   frontend:

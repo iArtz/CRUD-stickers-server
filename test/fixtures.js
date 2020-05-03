@@ -71,7 +71,25 @@ const sticker = {
     "URL": "http://devstickers.com/assets/img/pro/4mh6.png"
 }
 
+const queryString = [
+  {
+    Id: 4,
+    Title: 'JavaScript Beer',
+    Description: 'JS Beer Logo',
+    Rating: 7,
+    URL: 'http://devstickers.com/assets/img/pro/m539.png',
+  },
+  {
+    Id: 8,
+    Title: 'chai',
+    Description: 'chai.js logo',
+    Rating: 6,
+    URL: 'http://devstickers.com/assets/img/pro/5awx.png',
+  }
+]
+
 module.exports = {
   stickers,
-  sticker
+  sticker,
+  queryString
 }

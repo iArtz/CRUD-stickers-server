@@ -1,8 +1,11 @@
 const knex = require('./knex') // the connection
 
 module.exports = {
-  getAll() {
-    return knex('sticker')
+  getAll(query) {
+    const knexQuery = knex('sticker')
+    if (query.title) knexQuery.orWhere('Title', 'like', `%${query.title}%`)
+    if (query.description) knexQuery.orWhere('Description', 'like', `%${query.description}%`)
+    return knexQuery
   },
   getOne(id) {
     return knex('sticker').where('Id', id).first()
@@ -15,5 +18,5 @@ module.exports = {
   },
   delete(id) {
     return knex('sticker').where('Id', id).del()
-  }
+  },
 }

@@ -103,4 +103,18 @@ describe('CRUD Stickers', () => {
         done()
       })
   })
+
+  it('Query a record', (done) => {
+    request(app)
+      .get('/api/v1/stickers?title=Beer&description=chai')
+      .send(fixtures.sticker)
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200)
+      .then((response) => {
+        expect(response.body).to.be.a('array')
+        expect(response.body).to.deep.equal(fixtures.queryString)
+        done()
+      })
+  })
 })
