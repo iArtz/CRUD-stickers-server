@@ -39,9 +39,9 @@ We'll be using:
 - [x] Connect to the database'
   - [x] Create database connection file
   - [x] Create a queries file
-- [ ] List all records with GET /api/v1/stickers
-  - [ ] Create query
-  - [ ] Create route
+- [x] List all records with GET /api/v1/stickers
+  - [x] Create query
+  - [x] Create route
 - [ ] Setup tests
   - [ ] Install mocha, chai and supertest
   - [ ] Add a test database connection
