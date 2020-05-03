@@ -1,0 +1,10 @@
+version: '3'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+  
+  db:
+    environment: 
+      POSTGRES_HOST_AUTH_METHOD: trust

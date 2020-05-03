@@ -1,6 +1,6 @@
 # CRUD Stickers
 
-![Run Tests](https://github.com/iArtz/CRUD-stickers-server/workflows/Run%20Tests/badge.svg)
+![Docker Image CI](https://github.com/iArtz/CRUD-stickers-server/workflows/Docker%20Image%20CI/badge.svg)
 
 ## Setup
 

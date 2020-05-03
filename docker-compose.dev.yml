@@ -1,0 +1,24 @@
+version: '3'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    environment: 
+      DATABASE_URL: ${DATABASE_URL}
+      DATABASE_TEST_URL: ${DATABASE_TEST_URL}
+      POSTGRES_USER: ${POSTGRES_USER}
+    volumes:
+      - .:/usr/src/app
+      - packages:/usr/src/app/node_modules
+      - packages
+      
+  db:
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - db:/var/lib/postgresql/data
+
+volumes:
+  db:
+  packages:
