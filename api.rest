@@ -5,3 +5,11 @@ GET http://localhost:3000/ HTTP/1.1
 # @name getAll
 GET {{url}}/stickers HTTP/1.1
 ###
+# @name error
+GET {{url}}/stickers/bad HTTP/1.1
+###
+# @name getById
+GET {{url}}/stickers/1 HTTP/1.1
+###
+# @name getByIdNotExists
+GET {{url}}/stickers/12 HTTP/1.1

@@ -52,11 +52,11 @@ We'll be using:
 - [x] Make sure the tests are working!
 - [x] List all records with GET /api/v1/stickers
   - [x] Add test
-- [ ] Show one record with GET /api/v1/stickers/:id
-  - [ ] Validate id
-  - [ ] Create query
-  - [ ] Create route
-  - [ ] Add test
+- [x] Show one record with GET /api/v1/stickers/:id
+  - [x] Validate id
+  - [x] Create query
+  - [x] Create route
+  - [x] Add test
 - [ ] Create a record with POST /api/v1/stickers
   - [ ] Create route
   - [ ] Validate sticker!
