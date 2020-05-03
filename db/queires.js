@@ -9,5 +9,8 @@ module.exports = {
   },
   create(sticker) {
     return knex('sticker').insert(sticker, '*')
+  },
+  update(id, sticker) {
+    return knex('sticker').where('Id', id).update(sticker, '*')
   }
 }

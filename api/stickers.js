@@ -13,7 +13,9 @@ const vaildSticker = (sticker) => {
   const hasTitle =
     typeof sticker.Title == 'string' && sticker.Title.trim() != ''
   const hasURL = typeof sticker.URL == 'string' && sticker.URL.trim() != ''
-  return hasTitle && hasURL
+  const hasDescription = typeof sticker.Description == 'string' && sticker.Description.trim() != ''
+  const hasRating = !isNaN(sticker.Rating)
+  return hasTitle && hasURL && hasDescription && hasRating
 }
 
 router.get('/', async (req, res) => {
@@ -35,6 +37,16 @@ router.get('/:id', isValidId, async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   if (vaildSticker(req.body)) {
     await queries.create(req.body).then((stickers) => {
+      res.json(stickers[0])
+    })
+  } else {
+    next(new Error('Invalid sticker'))
+  }
+})
+
+router.put('/:id', isValidId, async (req, res, next) => {
+  if(vaildSticker(req.body)) {
+    await queries.update(req.params.id, req.body).then(stickers => {
       res.json(stickers[0])
     })
   } else {
